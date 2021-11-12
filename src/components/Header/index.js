@@ -1,9 +1,11 @@
-import React from 'react'
+import React from 'react';
+import style from "./style.css";
 
 const Header = () => {
   return (
-    <div>
-      <h1>Header</h1>
+    <div >
+      <img className="ig" src="./img/panal.jpg"></img>
+  
     </div>
   )
 }
