@@ -6,13 +6,16 @@ import Footer from "./components/Footer";
 import {Routes, Route} from "react-router-dom"
 
 const App = () => {
+
   return (
     <>
+    {/* <Header /> */}
       <Nav />
-      <Footer />
       <Routes>
-        <Route exact path="/" component={Home} />
+      <Route exact path="/" component={Home} />
       </Routes>
+      {/* <Footer /> */}
+
     </>
   );
 };
