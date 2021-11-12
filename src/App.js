@@ -7,6 +7,7 @@ import Footer from "./components/Footer";
 import { Routes, Route } from "react-router-dom";
 import Audiobook from "./components/Audiobook";
 import Ebook from "./components/Ebook";
+import Music from "./components/Music";
 
 import Movie from "./components/Movie";
 
@@ -19,7 +20,7 @@ const App = () => {
         <Route exact path="/movie" element={<Movie />} />
         <Route exact path="/audiobook" element={<Audiobook />} />
         <Route exact path="/ebook" element={<Ebook/>} />
-        {/* <Route exact path="/" element={Home} /> */}
+        <Route exact path="/music" element={<Music />} />
         {/* <Route exact path="/" element={Home} /> */}
         {/* <Route exact path="/" element={Home} /> */}
       </Routes>
