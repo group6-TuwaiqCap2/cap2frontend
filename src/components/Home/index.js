@@ -1,9 +1,12 @@
 import React from "react";
 import style from "./style.css";
+import Header from "../Header";
 
 const Home = () => {
+
   return (
     <div className="home">
+      <Header />
       <div className="card">
         <img className="image" src="./img/ebook.JPG"></img>
         <div className="content">
