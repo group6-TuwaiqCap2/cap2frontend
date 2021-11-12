@@ -7,6 +7,7 @@ import Footer from "./components/Footer";
 import { Routes, Route } from "react-router-dom";
 import Movie from "./components/Movie";
 import TvShow from "./components/TvShow";
+import Audiobook from "./components/Audiobook";
 
 const App = () => {
   return (
@@ -15,11 +16,11 @@ const App = () => {
       <Routes>
         <Route exact path="/" element={<Home />} />
         <Route exact path="/movie" element={<Movie />} />
-        {/* <Route exact path="/" element={Home} />
-        <Route exact path="/" element={Home} />
-        <Route exact path="/" element={Home} />
-        <Route exact path="/" element={Home} />
-        <Route exact path="/" element={Home} /> */}
+        <Route exact path="/audiobook" element={<Audiobook />} />
+        {/* <Route exact path="/" element={Home} /> */}
+        {/* <Route exact path="/" element={Home} /> */}
+        {/* <Route exact path="/" element={Home} /> */}
+        {/* <Route exact path="/" element={Home} /> */}
       </Routes>
       <Footer />
 
