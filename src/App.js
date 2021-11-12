@@ -11,6 +11,8 @@ import Music from "./components/Music";
 import MusicVideo from "./components/MusicVideo";
 import Podcast from "./components/Podcast"
 import Software from "./components/Software";
+import TvShow from "./components/TvShow";
+
 
 const App = () => {
   return (
@@ -25,6 +27,7 @@ const App = () => {
         <Route exact path="/musicVideo" element={<MusicVideo />} />
         <Route exact path="/podcast" element={<Podcast/>} />
         <Route exact path="/software" element={<Software/>} />
+        <Route exact path="/tvshow" element={<TvShow/>} />
 
       </Routes>
       <Footer />
