@@ -12,7 +12,6 @@
   z-index: 10;
   background-color: rgb(0, 0, 0);
 }
-
 .links {
   position: relative;
   /*  */
@@ -37,9 +36,8 @@
   color: white;
   background-color: rgb(250, 0, 0);
   border-radius: 4px;
-
 }
-@media screen and (max-width: 500px) {
+/* @media screen and (max-width: 500px) {
   .links {
     flex-direction: column;
     height: auto;
@@ -58,7 +56,7 @@
   .btn{
       display: block;
   }
-}
+} */
 /*  */
 
 .navMenu {
@@ -68,7 +66,6 @@
   white-space: nowrap;
   width: 100vh;
 }
-
 .navBtn {
   display: flex;
   align-items: center;

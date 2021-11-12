@@ -12,12 +12,13 @@ import MusicVideo from "./components/MusicVideo";
 import Podcast from "./components/Podcast"
 import Software from "./components/Software";
 import TvShow from "./components/TvShow";
-
+import User from "./components/User"
 
 const App = () => {
   return (
     <>
       <Nav />
+      <User />
       <Routes>
         <Route exact path="/" element={<Home />} />
         <Route exact path="/movie" element={<Movie />} />
@@ -28,7 +29,6 @@ const App = () => {
         <Route exact path="/podcast" element={<Podcast/>} />
         <Route exact path="/software" element={<Software/>} />
         <Route exact path="/tvshow" element={<TvShow/>} />
-
       </Routes>
       <Footer />
 

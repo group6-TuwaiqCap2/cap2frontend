@@ -2,7 +2,6 @@ import React from "react";
 import { NavLink, Link } from "react-router-dom";
 import "./style.css";
 const Nav = () => {
-
   return (
     <>
       <div className="wrapper">
@@ -35,13 +34,7 @@ const Nav = () => {
             Ebook
           </NavLink>
         </div>
-        <button className="btn">=</button>
-
-        <button className="navBtn">
-          <Link to="signin" className="navBtnLink">
-            Sign In
-          </Link>
-        </button>
+        {/* <button className="btn">=</button> */}
       </div>
     </>
   );
