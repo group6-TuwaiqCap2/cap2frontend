@@ -17,10 +17,10 @@ const MusicVideo = () => {
     <div className="App">
       <h1> Ebook </h1>
       <ul>
-        {musicVideos.map((musicVideos) => (
-          <li key={musicVideos.trackId}>
-            {musicVideos.trackName}
-            <img src={musicVideos.artworkUrl100}></img>
+        {musicVideos.map((musicVideo) => (
+          <li key={musicVideo.trackId}>
+            {musicVideo.trackName}
+            <img src={musicVideo.artworkUrl100}></img>
           </li>
         ))}
       </ul>

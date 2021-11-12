@@ -8,7 +8,7 @@ import Audiobook from "./components/Audiobook";
 import Ebook from "./components/Ebook";
 import Music from "./components/Music";
 import MusicVideo from "./components/MusicVideo";
-
+import Podcast from "./components/Podcast"
 import Movie from "./components/Movie";
 
 const App = () => {
@@ -22,7 +22,7 @@ const App = () => {
         <Route exact path="/ebook" element={<Ebook/>} />
         <Route exact path="/music" element={<Music />} />
         <Route exact path="/musicVideo" element={<MusicVideo />} />
-        {/* <Route exact path="/" element={Home} /> */}
+        <Route exact path="/podcast" element={<Podcast/>} />
       </Routes>
       <Footer />
 
