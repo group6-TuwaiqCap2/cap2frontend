@@ -10,7 +10,7 @@
   justify-content: space-between;
   padding: 0.5 rem calc((100vw - 100 px) / 2);
   z-index: 10;
-  background-color: rgba(0, 0, 0, 0.64);
+  background-color: rgb(0, 0, 0);
 }
 
 .links {
