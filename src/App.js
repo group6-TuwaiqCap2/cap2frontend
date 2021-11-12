@@ -6,10 +6,11 @@ import Nav from "./components/Nav";
 import Footer from "./components/Footer";
 import Audiobook from "./components/Audiobook";
 import Ebook from "./components/Ebook";
+import Movie from "./components/Movie";
 import Music from "./components/Music";
 import MusicVideo from "./components/MusicVideo";
 import Podcast from "./components/Podcast"
-import Movie from "./components/Movie";
+import Software from "./components/Software";
 
 const App = () => {
   return (
@@ -23,6 +24,8 @@ const App = () => {
         <Route exact path="/music" element={<Music />} />
         <Route exact path="/musicVideo" element={<MusicVideo />} />
         <Route exact path="/podcast" element={<Podcast/>} />
+        <Route exact path="/software" element={<Software/>} />
+
       </Routes>
       <Footer />
 
