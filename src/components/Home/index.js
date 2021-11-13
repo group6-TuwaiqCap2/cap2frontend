@@ -8,6 +8,7 @@ const Home = () => {
     <>
     <Header/>
     <div className="home">
+      <Header />
       <div className="card">
         <img className="image" src="./img/ebook.JPG"></img>
         <div className="content">

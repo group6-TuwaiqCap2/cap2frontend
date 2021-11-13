@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import "./style.css"
+import Search from "../Search";
+
 
 const Podcast = () => {
   const BASE_URL = "http://localhost:4000";
@@ -15,8 +17,10 @@ const Podcast = () => {
     setPodcast(podcasts.data.results);
   };
   return (
+
     <div className="podcast">
       <div className="subpodcast">
+      <Search data={podcasts} />
       <ul>
         {podcasts.map((podcast) => (
           <div className="data">
@@ -31,4 +35,5 @@ const Podcast = () => {
     </div>
   );
 }
+
 export default Podcast;

@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import Search from "../Search";
 import axios from "axios";
 
 const MusicVideo = () => {
@@ -10,12 +11,12 @@ const MusicVideo = () => {
   }, []);
   const getAllMusicVideo = async () => {
     const musicVideos = await axios.get(`${BASE_URL}/musicVideo`);
-    console.log(musicVideos);
     setmusicVideos(musicVideos.data.results);
   };
   return (
     <div className="App">
       <h1> Ebook </h1>
+      <Search data={musicVideos} />
       <ul>
         {musicVideos.map((musicVideo) => (
           <li key={musicVideo.trackId}>
@@ -26,6 +27,7 @@ const MusicVideo = () => {
       </ul>
     </div>
   );
+
 }
 
 export default MusicVideo;

@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import Search from "../Search";
 import axios from "axios";
 
 const Audiobook = () => {
@@ -11,11 +12,15 @@ const Audiobook = () => {
   const getAllaudiobook = async () => {
     const Audiobook = await axios.get(`${BASE_URL}/audiobook`);
     console.log(Audiobook);
+
+    // console.log(Audiobook);
+
     setAudiobook(Audiobook.data.results);
   };
   return (
     <div className="App">
       <h1> Audiobook</h1>
+      <Search data={Audiobook} />
       <ul>
         {Audiobook.map((aBook) => (
           <li key={aBook.trackId}>

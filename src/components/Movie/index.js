@@ -1,10 +1,9 @@
 import React, { useState, useEffect } from "react";
-import axios from "axios";
 import "./style.css"
-
+import Search from "../Search";
+import axios from "axios";
 const Movie = () => {
   const BASE_URL = "http://localhost:4000";
-
   const [movies, setMovies] = useState([]);
   useEffect(() => {
     getAllMovies();
@@ -15,10 +14,12 @@ const Movie = () => {
     setMovies(movies.data.results);
   };
   return (
+
     <div className="movies">
       <div className="movie">
+      <Search data={movies} />
       <ul >
-        {movies.map((movie) => (
+       { movies.map((movie) => (
           <div className="data">
           <li id="displiy" key={movie.trackId}>
             <img id="imag" src={movie.artworkUrl100}></img>
@@ -30,8 +31,7 @@ const Movie = () => {
         ))}
       </ul>
       </div>
-    </div>
-  );
-};
-
+      </div>
+ );
+}  
 export default Movie;

@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import Search from "../Search";
 import axios from "axios";
 
 const TvShow = () => {
@@ -10,12 +11,13 @@ const TvShow = () => {
   }, []);
   const getAlltvShow = async () => {
     const tvshows = await axios.get(`${BASE_URL}/tvshow`);
-    console.log(tvshows);
     setTvshow(tvshows.data.results);
   };
   return (
     <div className="App">
       <h1> Ebook </h1>
+      <Search data={tvshows} />
+
       <ul>
         {tvshows.map((tvshow) => (
           <li key={tvshow.trackId}>
@@ -26,6 +28,10 @@ const TvShow = () => {
       </ul>
     </div>
   );
+
 }
+
+
+
 
 export default TvShow;

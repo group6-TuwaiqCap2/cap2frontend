@@ -1,6 +1,6 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
-import "./App.css";
+import style from "./App.css";
 import Home from "./components/Home";
 import Nav from "./components/Nav";
 import Footer from "./components/Footer";
@@ -9,16 +9,14 @@ import Ebook from "./components/Ebook";
 import Movie from "./components/Movie";
 import Music from "./components/Music";
 import MusicVideo from "./components/MusicVideo";
-import Podcast from "./components/Podcast"
+import Podcast from "./components/Podcast";
 import Software from "./components/Software";
 import TvShow from "./components/TvShow";
-import User from "./components/User"
-import Header from "./components/Header";
+import Search from "./components/Search";
 
 const App = () => {
   return (
     <>
-
       <Nav />
       <div className="backgroundHome">
       <Routes>
@@ -34,9 +32,7 @@ const App = () => {
       </Routes>
       </div>
       <Footer />
-
-
-    </>
+      </>
   );
 };
 
