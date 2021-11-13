@@ -9,10 +9,6 @@ const Footer = () => {
     
     <div className="fulldiv">
         
-            <h1>
-                logo
-            </h1>
-        
         <div className="icon">
         <Link to="" id="path"> <BsFacebook/> </Link>
         <Link to="" id="path"> <BsTwitter/> </Link>

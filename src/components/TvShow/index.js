@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Search from "../Search";
 import axios from "axios";
+import "./style.css";
 
 const TvShow = () => {
   const BASE_URL = "http://localhost:4000";
@@ -14,19 +15,21 @@ const TvShow = () => {
     setTvshow(tvshows.data.results);
   };
   return (
-    <div className="App">
-      <h1> Ebook </h1>
+    <>
+    
       <Search data={tvshows} />
-
-      <ul>
+      <div className="tvShows">
         {tvshows.map((tvshow) => (
-          <li key={tvshow.trackId}>
-            {tvshow.trackName}
-            <img src={tvshow.artworkUrl100}></img>
-          </li>
+          <div key={tvshow.trackId}>
+            <div className="tvShow">
+            <img id="image" src={tvshow.artworkUrl100}></img>
+            <h3 id="trackName">{tvshow.trackName}</h3>
+            <h3 id="primaryGenreName">{tvshow.collectionCensoredName}</h3>
+          </div>
+          </div>
         ))}
-      </ul>
     </div>
+    </>
   );
 
 }

@@ -1,0 +1,25 @@
+.musics {
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+  grid-template-rows: auto;
+  grid-gap: 10px;
+  grid-row-gap: 20px;
+  padding-bottom: 10px;
+  width: 100%;
+  margin-top: 100px;
+}
+.music {
+  position: relative;
+  max-width: 50%;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+#trackName {
+  font-size: 20px;
+  text-align: center;
+  color: rgb(93, 96, 100);
+}
+
+#image {
+  width: 100%;
+}

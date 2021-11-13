@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Search from "../Search";
 import axios from "axios";
+import "./style.css"
 
 const Software = () => {
   const BASE_URL = "http://localhost:4000";
@@ -15,18 +16,20 @@ const Software = () => {
     setSoftwares(softwares.data.results);
   };
   return (
-    <div className="App">
-      <h1> Ebook </h1>
-      <ul>
-      <Search data={softwares}/>   
+    <>
+    <Search data={softwares}/>  
+    <div className="softwares">
         {softwares.map((software) => (
-          <li key={software.trackId}>
-            {software.trackName}
-            <img src={software.artworkUrl100}></img>
-          </li>
+          <div key={software.trackId}>
+            <div className="software">
+            <img id="image" src={software.artworkUrl100}></img>
+            <h3 id="trackName"> {software.trackName}</h3>
+            <h3 id="primaryGenreName">{software.primaryGenreName}</h3>
+          </div>
+          </div>
         ))}
-      </ul>
     </div>
+    </>
   );
 }
 export default Software;

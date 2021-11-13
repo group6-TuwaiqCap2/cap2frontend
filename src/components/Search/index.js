@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { VscSearch, VscChromeClose } from "react-icons/vsc";
+// import { VscSearch, VscChromeClose } from "react-icons/vsc";
 import axios from "axios";
 
 import "./style.css";
@@ -33,6 +33,7 @@ const Search = ({ data }) => {
           onChange={handleFilter}
         />
       </div>
+
       {filteredData.length != 0 && (
         <div className="dataResult">
           {filteredData.map((elem) => {

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import "./style.css"
+import "./style.css";
 import Search from "../Search";
 import axios from "axios";
 const Music = () => {
@@ -14,21 +14,22 @@ const Music = () => {
     setMusic(musics.data.results);
   };
 
-
   return (
-    <div className="music">
+    <>
       <Search data={musics} />
-      <ul>
+      <div className="musics">
         {musics.map((music) => (
-          <li key={music.trackId}>
-            {music.trackName}
-            <img src={music.artworkUrl100}></img>
-          </li>
+          <div key={music.trackId}>
+            <div className="music">
+              <img id="image" src={music.artworkUrl100}></img>
+              <h3 id="trackName"> {music.trackName} </h3>
+              <h3 id="primaryGenreName">{music.collectionName}</h3>
+            </div>
+          </div>
         ))}
-      </ul>
-    </div>
+      </div>
+    </>
   );
-
 };
 
 export default Music;
