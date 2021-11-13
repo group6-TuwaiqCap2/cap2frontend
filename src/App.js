@@ -4,7 +4,6 @@ import style from "./App.css";
 import Home from "./components/Home";
 import Nav from "./components/Nav";
 import Footer from "./components/Footer";
-
 import Audiobook from "./components/Audiobook";
 import Ebook from "./components/Ebook";
 import Movie from "./components/Movie";
