@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import Search from "../Search";
 import axios from "axios";
 
 const Music = () => {
@@ -16,6 +17,7 @@ const Music = () => {
   return (
     <div className="App">
       <h1> Ebook </h1>
+      <Search data={musics} />
       <ul>
         {musics.map((music) => (
           <li key={music.trackId}>
@@ -26,6 +28,6 @@ const Music = () => {
       </ul>
     </div>
   );
-}
+};
 
 export default Music;
