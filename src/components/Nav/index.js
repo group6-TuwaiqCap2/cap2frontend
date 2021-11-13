@@ -7,7 +7,7 @@ const Nav = () => {
     <>
       <div className="wrapper">
         <NavLink to="" className="links">
-          <h1>ℑ𝔗𝔘𝔑𝔈𝔖</h1>
+          <h1>𝕀𝕋𝕌ℕ𝔼𝕊</h1>
         </NavLink>
         <div className="navMenu">
           <NavLink to="/movie" className="links">
