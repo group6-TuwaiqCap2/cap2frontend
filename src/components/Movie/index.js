@@ -7,7 +7,7 @@ import axios from "axios";
 const Movie = () => {
   const BASE_URL = "http://localhost:4000";
   const [movies, setMovies] = useState([]);
-  
+
   const getAllMovies = async () => {
     const movies = await axios.get(`${BASE_URL}/movie`);
     console.log(movies);

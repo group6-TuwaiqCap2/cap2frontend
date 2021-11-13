@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Search from "../Search";
 import axios from "axios";
+import "./style.css";
 
 const Audiobook = () => {
   const BASE_URL = "http://localhost:4000";
@@ -18,18 +19,20 @@ const Audiobook = () => {
     setAudiobook(Audiobook.data.results);
   };
   return (
-    <div className="App">
-      <h1> Audiobook</h1>
-      <Search data={Audiobook} />
-      <ul>
+    <>
+    <Search data={Audiobook} />
+    <div className="audioBooks">
         {Audiobook.map((aBook) => (
-          <li key={aBook.trackId}>
-            {aBook.collectionName}
-            <img src={aBook.artworkUrl100}></img>
-          </li>
+          <div key={aBook.trackId}>
+            <div className="audioBook">
+            <img id="image" src={aBook.artworkUrl100}></img>
+            <h3 id="trackName">{aBook.collectionName}</h3>
+            <h3 id="primaryGenreName">{aBook.collectionExplicitness}</h3>
+          </div>
+          </div>
         ))}
-      </ul>
     </div>
+    </>
   );
 };
 export default Audiobook;

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Search from "../Search";
 import axios from "axios";
+import "./style.css";
 
 const Ebook = () => {
   const BASE_URL = "http://localhost:4000";
@@ -15,17 +16,20 @@ const Ebook = () => {
     setEbook(ebooks.data.results);
   };
   return (
-    <div className="App">
-      <h1> Ebook </h1>
-      <ul>
+    <>
+     <Search data={ebooks} />
+    <div className="ebooks">
         {ebooks.map((ebook) => (
-          <li key={ebook.trackId}>
-            {ebook.trackName}
-            <img src={ebook.artworkUrl100}></img>
-          </li>
+          <div key={ebook.trackId}>
+            <div className="ebook">
+            <img id="image" src={ebook.artworkUrl100}></img>
+            <h3 id="trackName" >{ebook.trackName}</h3>
+            <h3 id="primaryGenreName">{ebook.trackCensoredName}</h3>
+          </div>
+          </div>
         ))}
-      </ul>
     </div>
+    </>
   );
 }
 

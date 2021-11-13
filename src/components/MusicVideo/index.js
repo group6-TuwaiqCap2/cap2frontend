@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Search from "../Search";
 import axios from "axios";
+import "./style.css"
 
 const MusicVideo = () => {
   const BASE_URL = "http://localhost:4000";
@@ -14,18 +15,22 @@ const MusicVideo = () => {
     setmusicVideos(musicVideos.data.results);
   };
   return (
-    <div className="App">
-      <h1> Ebook </h1>
-      <Search data={musicVideos} />
-      <ul>
+    <>
+    <Search data={musicVideos} />
+    <div className="mVideos">
+      {/* <h1> Ebook </h1> */}
         {musicVideos.map((musicVideo) => (
-          <li key={musicVideo.trackId}>
-            {musicVideo.trackName}
-            <img src={musicVideo.artworkUrl100}></img>
-          </li>
+          <div key={musicVideo.trackId}>
+            <div className="mVideo">
+            <img id="image" src={musicVideo.artworkUrl100}></img>
+            <h3 id="trackName">{musicVideo.trackName}</h3>
+            <h3 id="primaryGenreName">{musicVideo.trackCensoredName}</h3>
+          </div>
+          </div>
         ))}
-      </ul>
+     
     </div>
+    </>
   );
 
 }

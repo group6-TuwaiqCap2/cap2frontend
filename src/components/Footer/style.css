@@ -3,18 +3,19 @@ footer {
   height: 3rem;
 }
 .fulldiv {
+  margin: 0;
   position: static;
   bottom: 0;
   background-color: rgb(83, 78, 78);
   text-align: center;
   width: 100%;
- height: 6.5rem;
+  height: 6.5rem;
 }
 .icon {
   font-size: 2rem;
+  padding: 10px;
 }
 #path{
     color: black;
-    margin: 0 20px;
-    
+    margin: 0 20px;  
 }

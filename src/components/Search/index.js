@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { VscSearch, VscChromeClose } from "react-icons/vsc";
+// import { VscSearch, VscChromeClose } from "react-icons/vsc";
 import axios from "axios";
 
 import "./style.css";
@@ -23,10 +23,10 @@ const Search = ({ data }) => {
     }
   };
   // to clear the input value
-  const clearInput = () => {
-    setFilteredData([]);
-    setWordEntered("");
-  };
+  // const clearInput = () => {
+  //   setFilteredData([]);
+  //   setWordEntered("");
+  // };
   return (
     <div className="search">
       <div className="searchInputs">
@@ -37,14 +37,14 @@ const Search = ({ data }) => {
           onChange={handleFilter}
         />
       </div>
-      <div className="searchIcon">
+      {/* <div className="searchIcon"> */}
         {/* icon */}
-        {filteredData.length === 0 ? (
+        {/* {filteredData.length === 0 ? (
           <VscSearch id="searchBtn"/>
         ) : (
           <VscChromeClose id="clearBtn" onClick={clearInput} />
-        )}
-      </div>
+        )} */}
+      {/* </div> */}
 
       {filteredData.length != 0 && (
         <div className="dataResult">
