@@ -1,0 +1,48 @@
+.movies {
+    width: 100%;
+  display: grid;
+  flex-direction: row;
+  margin-top: 1%;
+    background-color: black;
+
+  /* grid-template-columns:  60px 60px 70px ; 
+    padding: 10%; */
+}
+.movie{
+    display: flex;
+   
+    flex-direction: column;
+}
+.data{
+    width: 20%;
+    margin-top: 2%;
+    border: solid black 1px;
+    
+   
+}
+/* #displiy{
+    display: grid;
+    grid-template-columns:  auto 60px ;
+    
+} */
+/* ul{
+    display: flex;
+    flex-direction: row;
+} */
+img{
+    display: grid;
+    justify-content: space-between;
+    width: 100%;  
+   
+    vertical-align:baseline;
+  
+}
+#trackName{
+    font-size: 20px;
+    color: rgb(93, 96, 100);
+}
+#primaryGenreName{
+    color: white;
+    font-size: 20px;
+}
+

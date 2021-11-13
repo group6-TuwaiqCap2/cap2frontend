@@ -5,8 +5,8 @@ const Nav = () => {
   return (
     <>
       <div className="wrapper">
-        <NavLink to="/" className="links">
-          <h1>logo</h1>
+        <NavLink to="/" className="links" >
+         <h1>iTunes</h1>
         </NavLink>
         <div className="navMenu">
           <NavLink to="/movie" className="links">
@@ -34,13 +34,7 @@ const Nav = () => {
             Ebook
           </NavLink>
         </div>
-        <button className="btn">=</button>
-
-        <button className="navBtn">
-          <Link to="signin" className="navBtnLink">
-            Sign In
-          </Link>
-        </button>
+        {/* <button className="btn">=</button> */}
       </div>
     </>
   );

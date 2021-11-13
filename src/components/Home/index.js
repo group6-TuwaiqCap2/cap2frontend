@@ -1,8 +1,12 @@
 import React from "react";
 import style from "./style.css";
+import Header from "../Header";
 
 const Home = () => {
+
   return (
+    <>
+    <Header/>
     <div className="home">
       <div className="card">
         <img className="image" src="./img/ebook.JPG"></img>
@@ -65,6 +69,7 @@ const Home = () => {
         </div>
       </div>
     </div>
+    </>
   );
 };
 
