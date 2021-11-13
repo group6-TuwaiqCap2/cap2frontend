@@ -22,11 +22,7 @@ const Search = ({ data }) => {
       setFilteredData(newFilter);
     }
   };
-  // to clear the input value
-  // const clearInput = () => {
-  //   setFilteredData([]);
-  //   setWordEntered("");
-  // };
+
   return (
     <div className="search">
       <div className="searchInputs">
@@ -37,14 +33,6 @@ const Search = ({ data }) => {
           onChange={handleFilter}
         />
       </div>
-      {/* <div className="searchIcon"> */}
-        {/* icon */}
-        {/* {filteredData.length === 0 ? (
-          <VscSearch id="searchBtn"/>
-        ) : (
-          <VscChromeClose id="clearBtn" onClick={clearInput} />
-        )} */}
-      {/* </div> */}
 
       {filteredData.length != 0 && (
         <div className="dataResult">
