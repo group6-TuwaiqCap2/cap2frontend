@@ -6,8 +6,8 @@ const Nav = () => {
   return (
     <>
       <div className="wrapper">
-        <NavLink to="/" className="links" >
-         <h1>iTunes</h1>
+        <NavLink to="" className="links">
+          <h1>ℑ𝔗𝔘𝔑𝔈𝔖</h1>
         </NavLink>
         <div className="navMenu">
           <NavLink to="/movie" className="links">
@@ -35,6 +35,9 @@ const Nav = () => {
             Ebook
           </NavLink>
         </div>
+        <NavLink to="/" className="links" style={{color:"red"}}>
+          Home
+        </NavLink>
         {/* <button className="btn">=</button> */}
       </div>
     </>
