@@ -5,6 +5,8 @@ import Header from "../Header";
 const Home = () => {
 
   return (
+    <>
+    <Header/>
     <div className="home">
       <Header />
       <div className="card">
@@ -68,6 +70,7 @@ const Home = () => {
         </div>
       </div>
     </div>
+    </>
   );
 };
 

@@ -11,7 +11,6 @@ const MusicVideo = () => {
   }, []);
   const getAllMusicVideo = async () => {
     const musicVideos = await axios.get(`${BASE_URL}/musicVideo`);
-    // console.log(musicVideos);
     setmusicVideos(musicVideos.data.results);
   };
   return (
@@ -28,6 +27,7 @@ const MusicVideo = () => {
       </ul>
     </div>
   );
-};
+
+}
 
 export default MusicVideo;

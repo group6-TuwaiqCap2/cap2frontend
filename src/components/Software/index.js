@@ -11,13 +11,14 @@ const Software = () => {
   }, []);
   const getAllsoftware = async () => {
     const softwares = await axios.get(`${BASE_URL}/software`);
-    // console.log(softwares);
+
     setSoftwares(softwares.data.results);
   };
   return (
     <div className="App">
       <h1> Ebook </h1>
-      <Search data={softwares}/>      <ul>
+      <ul>
+      <Search data={softwares}/>   
         {softwares.map((software) => (
           <li key={software.trackId}>
             {software.trackName}

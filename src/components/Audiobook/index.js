@@ -11,7 +11,10 @@ const Audiobook = () => {
   }, []);
   const getAllaudiobook = async () => {
     const Audiobook = await axios.get(`${BASE_URL}/audiobook`);
+    console.log(Audiobook);
+
     // console.log(Audiobook);
+
     setAudiobook(Audiobook.data.results);
   };
   return (
