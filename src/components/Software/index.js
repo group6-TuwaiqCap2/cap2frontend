@@ -22,7 +22,7 @@ const Software = () => {
         {softwares.map((software) => (
           <div key={software.trackId}>
             <div className="software">
-            <img id="image" src={software.artworkUrl100}></img>
+            <img id="image" src={software.artworkUrl100} alt="software"></img>
             <h3 id="trackName"> {software.trackName}</h3>
             <h3 id="primaryGenreName">{software.primaryGenreName}</h3>
           </div>

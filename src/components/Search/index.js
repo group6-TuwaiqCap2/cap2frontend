@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 // import { VscSearch, VscChromeClose } from "react-icons/vsc";
-import axios from "axios";
+// import axios from "axios";
 
 import "./style.css";
 
 const Search = ({ data }) => {
-  const BASE_URL = "http://localhost:4000";
+  // const BASE_URL = "http://localhost:4000";
   // search
   const [filteredData, setFilteredData] = useState([]);
   const [wordEntered, setWordEntered] = useState("");
@@ -34,7 +34,7 @@ const Search = ({ data }) => {
         />
       </div>
 
-      {filteredData.length != 0 && (
+      {filteredData.length !== 0 && (
         <div className="dataResult">
           {filteredData.map((elem) => {
             return <p>{elem.trackName}</p>;

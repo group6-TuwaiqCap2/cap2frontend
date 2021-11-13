@@ -21,7 +21,7 @@ const Music = () => {
         {musics.map((music) => (
           <div key={music.trackId}>
             <div className="music">
-              <img id="image" src={music.artworkUrl100}></img>
+              <img id="image" src={music.artworkUrl100} alt="music"></img>
               <h3 id="trackName"> {music.trackName} </h3>
               <h3 id="primaryGenreName">{music.collectionName}</h3>
             </div>

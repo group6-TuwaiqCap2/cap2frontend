@@ -1,11 +1,11 @@
 import React from 'react';
-import style from "./style.css";
+import "./style.css";
 
 const Header = () => {
 
   return (
     <div >
-      <img className="ig" src="./img/panal.jpg"></img>
+      <img className="ig" src="./img/panal.jpg" alt="panal"></img>
   
     </div>
   )
