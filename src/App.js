@@ -4,6 +4,7 @@ import style from "./App.css";
 import Home from "./components/Home";
 import Nav from "./components/Nav";
 import Footer from "./components/Footer";
+
 import Audiobook from "./components/Audiobook";
 import Ebook from "./components/Ebook";
 import Movie from "./components/Movie";
@@ -17,6 +18,7 @@ import User from "./components/User"
 const App = () => {
   return (
     <>
+
       <Nav />
       <User />
       <Routes>
@@ -31,6 +33,7 @@ const App = () => {
         <Route exact path="/tvshow" element={<TvShow/>} />
       </Routes>
       <Footer />
+
 
     </>
   );
