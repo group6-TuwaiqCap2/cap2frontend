@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import Search from "../Search";
 import axios from "axios";
 
 const Software = () => {
@@ -10,13 +11,13 @@ const Software = () => {
   }, []);
   const getAllsoftware = async () => {
     const softwares = await axios.get(`${BASE_URL}/software`);
-    console.log(softwares);
+    // console.log(softwares);
     setSoftwares(softwares.data.results);
   };
   return (
     <div className="App">
       <h1> Ebook </h1>
-      <ul>
+      <Search data={softwares}/>      <ul>
         {softwares.map((software) => (
           <li key={software.trackId}>
             {software.trackName}

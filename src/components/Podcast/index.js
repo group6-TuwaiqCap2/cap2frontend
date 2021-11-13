@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import Search from "../Search";
 
 const Podcast = () => {
   const BASE_URL = "http://localhost:4000";
@@ -16,6 +17,7 @@ const Podcast = () => {
   return (
     <div className="App">
       <h1> Ebook </h1>
+      <Search data={podcasts} />
       <ul>
         {podcasts.map((podcast) => (
           <li key={podcast.trackId}>
@@ -26,5 +28,5 @@ const Podcast = () => {
       </ul>
     </div>
   );
-}
+};
 export default Podcast;
