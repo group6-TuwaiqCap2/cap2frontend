@@ -34,13 +34,7 @@ const Nav = () => {
             Ebook
           </NavLink>
         </div>
-        <button className="btn">=</button>
-
-        <button className="navBtn">
-          <Link to="signin" className="navBtnLink">
-            Sign In
-          </Link>
-        </button>
+        {/* <button className="btn">=</button> */}
       </div>
     </>
   );
