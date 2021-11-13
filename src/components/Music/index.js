@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
+import "./style.css"
 import Search from "../Search";
 import axios from "axios";
-
 const Music = () => {
   const BASE_URL = "http://localhost:4000";
 
@@ -11,12 +11,12 @@ const Music = () => {
   }, []);
   const getAllMusic = async () => {
     const musics = await axios.get(`${BASE_URL}/music`);
-    console.log(musics);
     setMusic(musics.data.results);
   };
+
+
   return (
-    <div className="App">
-      <h1> Ebook </h1>
+    <div className="music">
       <Search data={musics} />
       <ul>
         {musics.map((music) => (
@@ -28,6 +28,7 @@ const Music = () => {
       </ul>
     </div>
   );
+
 };
 
 export default Music;
