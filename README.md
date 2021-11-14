@@ -14,7 +14,7 @@ ___
 ![example workflow](https://github.com/github/docs/actions/workflows/main.yml/badge.svg)
 ___
 ## Screenshots:
-<!-- Include logo/demo screenshot etc. -->
+![websiteScreenShot](public/img/homePage.png)
 ___
 ## Tech/framework used:
 * JavaScript
