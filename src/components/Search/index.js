@@ -1,3 +1,4 @@
+
 // import React, { useState } from "react";
 // import { useEffect } from "react";
 // import { VscSearch, VscChromeClose } from "react-icons/vsc";
@@ -29,3 +30,4 @@ const Search = ({ searchpages }) => {
 };
 
 export default Search;
+
