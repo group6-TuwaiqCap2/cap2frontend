@@ -14,7 +14,7 @@ const Home = () => {
         <div className="card">
 
           <NavLink to="/ebook">
-            <img className="image" src="./img/ebook.JPG"></img>
+            <img className="image" src="./img/ebook.JPG" alt="ebook"></img>
 
             <div className="content">
               <h1>ebook</h1>
