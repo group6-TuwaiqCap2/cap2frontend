@@ -12,8 +12,10 @@ const Home = () => {
       <h3 style={{fontSize: "15px"}} className="itunesTit">Henry Wadsworth Longfellow</h3>
       <div className="home">
         <div className="card">
-          <NavLink to="/movie">
-            <img className="image" src="./img/ebook.JPG" alt="ebookimg"></img>
+
+          <NavLink to="/ebook">
+            <img className="image" src="./img/ebook.JPG"></img>
+
             <div className="content">
               <h1>ebook</h1>
             </div>
@@ -41,7 +43,7 @@ const Home = () => {
           </NavLink>
         </div>
         <div className="card">
-          <NavLink to="/movie">
+          <NavLink to="/music">
             <img
               className="image"
               src="./img/music.JPG"

@@ -15,9 +15,23 @@ const Podcast = () => {
     console.log(podcasts);
     setPodcast(podcasts.data.results);
   };
+  const searchpages = (e) => {
+    const value = e.target.value.toLowerCase();
+    if (value !== "") {
+      setPodcast(
+        podcasts.filter((podcast) => {
+          const podcastName = podcast.trackName.toLowerCase();
+          if (podcastName.includes(value)) return podcast;
+          else return null;
+        })
+      );
+    } else {
+      getAllPodcast();
+    }
+  };
   return (
     <>
-      <Search data={podcasts} />
+      <Search className="search" searchpages={searchpages}/>
       <div className="podcasts">
         {podcasts.map((podcast) => (
           <div key={podcast.trackId}>

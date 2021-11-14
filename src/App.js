@@ -30,6 +30,7 @@ const App = () => {
         <Route exact path="/software" element={<Software/>} />
         <Route exact path="/tvshow" element={<TvShow/>} />
       </Routes>
+
       </div>
       <Footer />
       </>
