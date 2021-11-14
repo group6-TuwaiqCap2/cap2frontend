@@ -14,7 +14,7 @@ const Audiobook = () => {
     const Audiobook = await axios.get(`${BASE_URL}/audiobook`);
     console.log(Audiobook);
 
-    // console.log(Audiobook);
+   
 
     setAudiobook(Audiobook.data.results);
   };
@@ -36,18 +36,19 @@ const Audiobook = () => {
 
   return (
     <>
-    <Search className="search" searchpages={searchpages} />
-    <div className="audioBooks">
+      <Search className="search" searchpages={searchpages} />
+      <div className="audioBooks">
         {Audiobook.map((aBook) => (
           <div key={aBook.trackId}>
             <div className="audioBook">
-            <img id="image" src={aBook.artworkUrl100} alt="audiobook"></img>
-            <h3 id="trackName">{aBook.collectionName}</h3>
-            <h3 id="primaryGenreName">{aBook.collectionExplicitness}</h3>
-          </div>
+              <img id="image" src={aBook.artworkUrl100} alt="audiobook"></img>
+
+              <h3 id="trackName">{aBook.collectionName}</h3>
+              <h3 id="primaryGenreName">{aBook.collectionExplicitness}</h3>
+            </div>
           </div>
         ))}
-    </div>
+      </div>
     </>
   );
 };

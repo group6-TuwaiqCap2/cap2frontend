@@ -12,28 +12,28 @@ import MusicVideo from "./components/MusicVideo";
 import Podcast from "./components/Podcast";
 import Software from "./components/Software";
 import TvShow from "./components/TvShow";
-
+import Favourite from "./components/Favourite";
 
 const App = () => {
   return (
     <>
       <Nav />
       <div className="backgroundHome">
-      <Routes>
-        <Route exact path="/" element={<Home />} />
-        <Route exact path="/movie" element={<Movie />} />
-        <Route exact path="/audiobook" element={<Audiobook />} />
-        <Route exact path="/ebook" element={<Ebook/>} />
-        <Route exact path="/music" element={<Music />} />
-        <Route exact path="/musicVideo" element={<MusicVideo />} />
-        <Route exact path="/podcast" element={<Podcast/>} />
-        <Route exact path="/software" element={<Software/>} />
-        <Route exact path="/tvshow" element={<TvShow/>} />
-      </Routes>
-
+        <Routes>
+          <Route exact path="/" element={<Home />} />
+          <Route exact path="/movie" element={<Movie />} />
+          <Route exact path="/audiobook" element={<Audiobook />} />
+          <Route exact path="/ebook" element={<Ebook />} />
+          <Route exact path="/music" element={<Music />} />
+          <Route exact path="/musicVideo" element={<MusicVideo />} />
+          <Route exact path="/podcast" element={<Podcast />} />
+          <Route exact path="/software" element={<Software />} />
+          <Route exact path="/tvshow" element={<TvShow />} />
+          <Route exact path="/favourite" element={<Favourite />} />
+        </Routes>
       </div>
       <Footer />
-      </>
+    </>
   );
 };
 

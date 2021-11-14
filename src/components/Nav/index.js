@@ -34,8 +34,11 @@ const Nav = () => {
           <NavLink to="/ebook" className="links">
             Ebook
           </NavLink>
+          <NavLink to="/favourite" className="links">
+            Favourite
+          </NavLink>
         </div>
-        <NavLink to="/" className="links" style={{color:"red"}}>
+        <NavLink to="/" className="links" style={{ color: "red" }}>
           Home
         </NavLink>
         {/* <button className="btn">=</button> */}
