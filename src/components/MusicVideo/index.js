@@ -36,8 +36,8 @@ const MusicVideo = () => {
           <div key={musicVideo.trackId}>
             <div className="mVideo">
             <img id="image" src={musicVideo.artworkUrl100} alt="musicvideo"></img>
-            <h3 id="trackName">{musicVideo.trackName}</h3>
-            <h3 id="primaryGenreName">{musicVideo.trackCensoredName}</h3>
+            {/* <h3 id="trackName">{musicVideo.trackName}</h3>
+            <h3 id="primaryGenreName">{musicVideo.trackCensoredName}</h3> */}
           </div>
           </div>
         ))}

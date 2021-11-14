@@ -8,11 +8,14 @@ const Home = () => {
     <>
       <Header />
       <h1 className="lg">𝕀𝕋𝕌ℕ𝔼𝕊</h1>
-      <h3 className="itunesTit">“Music is the universal language of mankind.” </h3>
-      <h3 style={{fontSize: "15px"}} className="itunesTit">Henry Wadsworth Longfellow</h3>
+      <h3 className="itunesTit">
+        “Music is the universal language of mankind.”{" "}
+      </h3>
+      <h3 style={{ fontSize: "15px" }} className="itunesTit">
+        Henry Wadsworth Longfellow
+      </h3>
       <div className="home">
         <div className="card">
-
           <NavLink to="/ebook">
             <img className="image" src="./img/ebook.JPG" alt="ebook"></img>
 
@@ -57,7 +60,11 @@ const Home = () => {
         </div>
         <div className="card">
           <NavLink to="/musicVideo">
-            <img className="image" src="./img/musicVideo.JPG" alt="musicvideo"></img>
+            <img
+              className="image"
+              src="./img/musicVideo.JPG"
+              alt="musicvideo"
+            ></img>
             <div className="content">
               <h1>musicVideo</h1>
             </div>

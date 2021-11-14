@@ -17,7 +17,7 @@ const Footer = () => {
        
        
            <h3>
-           Designed by<span> Group 6</span> All rights reserved.
+           Designed by<span> Group 6</span> All rights reserved
            </h3>
        
     </div>
