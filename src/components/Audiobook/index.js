@@ -41,7 +41,7 @@ const Audiobook = () => {
         {Audiobook.map((aBook) => (
           <div key={aBook.trackId}>
             <div className="audioBook">
-            <img id="image" src={aBook.artworkUrl100}></img>
+            <img id="image" src={aBook.artworkUrl100} alt="audiobook"></img>
             <h3 id="trackName">{aBook.collectionName}</h3>
             <h3 id="primaryGenreName">{aBook.collectionExplicitness}</h3>
           </div>

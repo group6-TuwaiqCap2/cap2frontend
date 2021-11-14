@@ -36,7 +36,7 @@ const Podcast = () => {
         {podcasts.map((podcast) => (
           <div key={podcast.trackId}>
             <div className="podcast">
-              <img id="image" src={podcast.artworkUrl100}></img>
+              <img id="image" src={podcast.artworkUrl100} alt="podcast"></img>
               <h3 id="trackName">{podcast.trackName}</h3>
               <h3 id="primaryGenreName">{podcast.trackCensoredName}</h3>
             </div>

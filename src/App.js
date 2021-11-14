@@ -3,7 +3,7 @@ import { Routes, Route } from "react-router-dom";
 import Home from "./components/Home";
 import Nav from "./components/Nav";
 import Footer from "./components/Footer";
-import  "./App.css";
+import "./App.css";
 import Audiobook from "./components/Audiobook";
 import Ebook from "./components/Ebook";
 import Movie from "./components/Movie";
@@ -12,6 +12,7 @@ import MusicVideo from "./components/MusicVideo";
 import Podcast from "./components/Podcast";
 import Software from "./components/Software";
 import TvShow from "./components/TvShow";
+
 
 const App = () => {
   return (

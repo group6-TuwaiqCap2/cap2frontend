@@ -2,15 +2,16 @@
 // import { useEffect } from "react";
 // import { VscSearch, VscChromeClose } from "react-icons/vsc";
 // import axios from "axios";
+
 import { FaSearch } from 'react-icons/fa'
+
 import "./style.css";
 // import { useNavigate } from "react-router-dom";
 
 
+
 const Search = ({ searchpages }) => {
-  // const BASE_URL = "http://localhost:4000";
-  // search
-  
+
 
   return (
     <div className="search">
@@ -23,6 +24,7 @@ const Search = ({ searchpages }) => {
               </div>
           </div>
   </div>
+
   );
 };
 
