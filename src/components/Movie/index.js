@@ -4,7 +4,7 @@ import Search from "../Search";
 import axios from "axios";
 
 const Movie = () => {
-  const BASE_URL = "http://localhost:4000";
+  const BASE_URL = "https://cap2-itunes.herokuapp.com/";
   const [movies, setMovies] = useState([]);
 
   useEffect(() => {
