@@ -14,9 +14,27 @@ const Music = () => {
     setMusic(musics.data.results);
   };
 
+
+
+  const searchpages = (e) => {
+    const value = e.target.value.toLowerCase();
+    if (value !== "") {
+      setMusic(
+        musics.filter((music) => {
+          const musicName = music.trackName.toLowerCase();
+          if (musicName.includes(value)) return music;
+          else return null;
+        })
+      );
+    } else {
+      getAllMusic();
+    }
+  };
+
+
   return (
     <>
-      <Search data={musics} />
+      <Search className="search" searchpages={searchpages} />
       <div className="musics">
         {musics.map((music) => (
           <div key={music.trackId}>

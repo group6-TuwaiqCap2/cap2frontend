@@ -15,9 +15,23 @@ const Ebook = () => {
     console.log(ebooks);
     setEbook(ebooks.data.results);
   };
+  const searchpages = (e) => {
+    const value = e.target.value.toLowerCase();
+    if (value !== "") {
+      setEbook(
+        ebooks.filter((ebook) => {
+          const ebookName = ebook.trackName.toLowerCase();
+          if (ebookName.includes(value)) return ebook;
+          else return null;
+        })
+      );
+    } else {
+      getAllebook();
+    }
+  };
   return (
     <>
-     <Search data={ebooks} />
+     <Search className="search" searchpages={searchpages}/>
     <div className="ebooks">
         {ebooks.map((ebook) => (
           <div key={ebook.trackId}>

@@ -1,47 +1,28 @@
-import React, { useState } from "react";
+// import React, { useState } from "react";
+// import { useEffect } from "react";
 // import { VscSearch, VscChromeClose } from "react-icons/vsc";
-import axios from "axios";
-
+// import axios from "axios";
+import { FaSearch } from 'react-icons/fa'
 import "./style.css";
+// import { useNavigate } from "react-router-dom";
 
-const Search = ({ data }) => {
-  const BASE_URL = "http://localhost:4000";
+
+const Search = ({ searchpages }) => {
+  // const BASE_URL = "http://localhost:4000";
   // search
-  const [filteredData, setFilteredData] = useState([]);
-  const [wordEntered, setWordEntered] = useState("");
-
-  const handleFilter = (event) => {
-    const searchWord = event.target.value;
-    setWordEntered(searchWord);
-    const newFilter = data.filter((elem) => {
-      return elem.trackName.toLowerCase().includes(searchWord.toLowerCase());
-    });
-    if (searchWord === "") {
-      setFilteredData([]);
-    } else {
-      setFilteredData(newFilter);
-    }
-  };
+  
 
   return (
     <div className="search">
-      <div className="searchInputs">
-        <input
-          type="text"
-          placeholder="search "
-          value={wordEntered}
-          onChange={handleFilter}
-        />
-      </div>
-
-      {filteredData.length != 0 && (
-        <div className="dataResult">
-          {filteredData.map((elem) => {
-            return <p>{elem.trackName}</p>;
-          })}
-        </div>
-      )}
-    </div>
+    <div className="searchInputs">
+              <div className="searchBar">
+                  <input className="searchQueryInput" type="text" placeholder="Search" onChange={searchpages}/>
+                  <button className="searchQuerySubmit" type="submit">
+                      <FaSearch />
+                  </button>
+              </div>
+          </div>
+  </div>
   );
 };
 

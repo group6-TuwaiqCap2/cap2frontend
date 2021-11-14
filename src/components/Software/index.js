@@ -15,9 +15,23 @@ const Software = () => {
 
     setSoftwares(softwares.data.results);
   };
+  const searchpages = (e) => {
+    const value = e.target.value.toLowerCase();
+    if (value !== "") {
+      setSoftwares(
+        softwares.filter((software => {
+          const softwareName = software.trackName.toLowerCase();
+          if (softwareName.includes(value)) return software;
+          else return null;
+        })
+      ))
+    } else {
+      getAllsoftware();
+    }
+  };
   return (
     <>
-    <Search data={softwares}/>  
+    <Search className="search" searchpages={searchpages}/>  
     <div className="softwares">
         {softwares.map((software) => (
           <div key={software.trackId}>

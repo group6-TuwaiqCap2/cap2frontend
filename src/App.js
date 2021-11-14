@@ -3,18 +3,15 @@ import { Routes, Route } from "react-router-dom";
 import Home from "./components/Home";
 import Nav from "./components/Nav";
 import Footer from "./components/Footer";
-import style from "./App.css";
+import  "./App.css";
 import Audiobook from "./components/Audiobook";
 import Ebook from "./components/Ebook";
 import Movie from "./components/Movie";
-import DecMovie from "./components/DecMovie";
 import Music from "./components/Music";
 import MusicVideo from "./components/MusicVideo";
 import Podcast from "./components/Podcast";
 import Software from "./components/Software";
 import TvShow from "./components/TvShow";
-import Search from "./components/Search";
-
 
 const App = () => {
   return (
@@ -24,7 +21,6 @@ const App = () => {
       <Routes>
         <Route exact path="/" element={<Home />} />
         <Route exact path="/movie" element={<Movie />} />
-         <Route exact path="/DecMovie" element={<DecMovie />} />
         <Route exact path="/audiobook" element={<Audiobook />} />
         <Route exact path="/ebook" element={<Ebook/>} />
         <Route exact path="/music" element={<Music />} />
@@ -33,6 +29,7 @@ const App = () => {
         <Route exact path="/software" element={<Software/>} />
         <Route exact path="/tvshow" element={<TvShow/>} />
       </Routes>
+
       </div>
       <Footer />
       </>

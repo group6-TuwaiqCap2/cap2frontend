@@ -18,9 +18,25 @@ const Audiobook = () => {
 
     setAudiobook(Audiobook.data.results);
   };
+
+  const searchpages = (e) => {
+    const value = e.target.value.toLowerCase();
+    if (value !== "") {
+      setAudiobook(
+        Audiobook.filter((audiobook) => {
+          const audiobookName = audiobook.collectionName.toLowerCase();
+          if (audiobookName.includes(value)) return audiobook;
+          else return null;
+        })
+      );
+    } else {
+      getAllaudiobook();
+    }
+  };
+
   return (
     <>
-    <Search data={Audiobook} />
+    <Search className="search" searchpages={searchpages} />
     <div className="audioBooks">
         {Audiobook.map((aBook) => (
           <div key={aBook.trackId}>

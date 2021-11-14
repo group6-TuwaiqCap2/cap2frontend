@@ -14,11 +14,24 @@ const MusicVideo = () => {
     const musicVideos = await axios.get(`${BASE_URL}/musicVideo`);
     setmusicVideos(musicVideos.data.results);
   };
+  const searchpages = (e) => {
+    const value = e.target.value.toLowerCase();
+    if (value !== "") {
+      setmusicVideos(
+        musicVideos.filter((musicVideo) => {
+          const musicVideosName = musicVideo.trackName.toLowerCase();
+          if (musicVideosName.includes(value)) return musicVideo;
+          else return null;
+        })
+      );
+    } else {
+      getAllMusicVideo();
+    }
+  };
   return (
     <>
-    <Search data={musicVideos} />
+    <Search className="search" searchpages={searchpages}  />
     <div className="mVideos">
-      {/* <h1> Ebook </h1> */}
         {musicVideos.map((musicVideo) => (
           <div key={musicVideo.trackId}>
             <div className="mVideo">
