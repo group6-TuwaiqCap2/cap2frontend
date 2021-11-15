@@ -5,7 +5,7 @@ import { NavLink } from "react-router-dom";
 
 const Home = () => {
   return (
-    <>
+    <div className="homePgae">
       <Header />
       <h1 className="lg">𝕀𝕋𝕌ℕ𝔼𝕊</h1>
       <h3 className="itunesTit">
@@ -100,7 +100,7 @@ const Home = () => {
           </NavLink>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

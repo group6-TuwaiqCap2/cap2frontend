@@ -37,8 +37,8 @@ const Ebook = () => {
           <div key={ebook.trackId}>
             <div className="ebook">
             <img id="image" src={ebook.artworkUrl100} alt="ebook"></img>
-            {/* <h3 id="trackName" >{ebook.trackName}</h3>
-            <h3 id="primaryGenreName">{ebook.trackCensoredName}</h3> */}
+            <h3 id="trackName" >{ebook.trackName}</h3>
+            {/* <h3 id="primaryGenreName">{ebook.trackCensoredName}</h3> */}
           </div>
           </div>
         ))}

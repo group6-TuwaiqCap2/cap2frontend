@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Search from "../Search";
 import axios from "axios";
-import "./style.css"
+import "./style.css";
 
 const MusicVideo = () => {
   const BASE_URL = "http://localhost:4000";
@@ -30,22 +30,24 @@ const MusicVideo = () => {
   };
   return (
     <>
-    <Search className="search" searchpages={searchpages}  />
-    <div className="mVideos">
+      <Search className="search" searchpages={searchpages} />
+      <div className="mVideos">
         {musicVideos.map((musicVideo) => (
           <div key={musicVideo.trackId}>
             <div className="mVideo">
-            <img id="image" src={musicVideo.artworkUrl100} alt="musicvideo"></img>
-            {/* <h3 id="trackName">{musicVideo.trackName}</h3>
-            <h3 id="primaryGenreName">{musicVideo.trackCensoredName}</h3> */}
-          </div>
+              <img
+                id="image"
+                src={musicVideo.artworkUrl100}
+                alt="musicvideo"
+              ></img>
+              <h3 id="trackName">{musicVideo.trackName}</h3>
+              {/* <h3 id="primaryGenreName">{musicVideo.trackCensoredName}</h3> */}
+            </div>
           </div>
         ))}
-     
-    </div>
+      </div>
     </>
   );
-
-}
+};
 
 export default MusicVideo;

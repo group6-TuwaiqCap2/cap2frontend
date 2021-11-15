@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
-import Desc from "../Desc";
+// import Desc from "../Desc";
 import { useNavigate } from "react-router-dom";
-
 import "./style.css";
 import Search from "../Search";
 import axios from "axios";
@@ -17,7 +16,6 @@ const Movie = () => {
 
   const getAllMovies = async () => {
     const movies = await axios.get(`${BASE_URL}/movie`);
-
     setMovies(movies.data.results);
   };
 
@@ -49,7 +47,6 @@ const Movie = () => {
       });
 
   };
-
   return (
     <>
       <Search className="search" searchpages={searchpages} />
@@ -70,7 +67,6 @@ const Movie = () => {
             </div>
           </div>
         ))}
-
       </div>
     </>
   );

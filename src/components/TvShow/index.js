@@ -30,25 +30,20 @@ const TvShow = () => {
   };
   return (
     <>
-    
       <Search className="search" searchpages={searchpages} />
       <div className="tvShows">
         {tvshows.map((tvshow) => (
           <div key={tvshow.trackId}>
             <div className="tvShow">
-            <img id="image" src={tvshow.artworkUrl100} alt="tvshow"></img>
-            {/* <h3 id="trackName">{tvshow.trackName}</h3>
-            <h3 id="primaryGenreName">{tvshow.collectionCensoredName}</h3> */}
-          </div>
+              <img id="image" src={tvshow.artworkUrl100} alt="tvshow"></img>
+              <h3 id="trackName">{tvshow.trackName}</h3>
+              {/* <h3 id="primaryGenreName">{tvshow.collectionCensoredName}</h3> */}
+            </div>
           </div>
         ))}
-    </div>
+      </div>
     </>
   );
-
-}
-
-
-
+};
 
 export default TvShow;

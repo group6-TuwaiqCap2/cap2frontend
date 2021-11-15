@@ -31,7 +31,6 @@ const App = () => {
           <Route exact path="/tvshow" element={<TvShow />} />
           <Route exact path="/favourite" element={<Favourite />} />
         </Routes>
-
       </div>
       <Footer />
     </>
