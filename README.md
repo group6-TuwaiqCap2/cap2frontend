@@ -4,6 +4,7 @@
 > **Tuwaiq-bootcamp**
 #####  ` Capstone Project II`
 
+* [Heroku Link](https://cap2-itunes-front.herokuapp.com/)
 ___
 ## Motivation:
 For this Capstone Project, we will create as a team a full-stack web application using React and Express. we will also need to deploy our app to Heroku.
@@ -13,7 +14,7 @@ ___
 ![example workflow](https://github.com/github/docs/actions/workflows/main.yml/badge.svg)
 ___
 ## Screenshots:
-<!-- Include logo/demo screenshot etc. -->
+![websiteScreenShot](public/img/homePage.png)
 ___
 ## Tech/framework used:
 * JavaScript

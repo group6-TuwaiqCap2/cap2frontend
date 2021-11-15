@@ -1,4 +1,7 @@
 import React, { useState, useEffect } from "react";
+import Desc from "../Desc";
+import { useNavigate } from "react-router-dom";
+
 import "./style.css";
 import Search from "../Search";
 import axios from "axios";
@@ -33,6 +36,7 @@ const Movie = () => {
     }
   };
 
+
   const goFavourite = async (item) => {
     console.log(item);
     axios
@@ -43,6 +47,7 @@ const Movie = () => {
       .catch(function (error) {
         console.log(error);
       });
+
   };
 
   return (
@@ -65,6 +70,7 @@ const Movie = () => {
             </div>
           </div>
         ))}
+
       </div>
     </>
   );
