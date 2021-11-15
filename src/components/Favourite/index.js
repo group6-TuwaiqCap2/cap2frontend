@@ -13,7 +13,7 @@ const Favourite = () => {
 
   const getAllFavourite = async () => {
     const favmovies = axios.get(`${BASE_URL}/`);
-    console.log(favmovies);
+    // console.log(favmovies);
     setFavourite(favmovies.data.results);
   };
 

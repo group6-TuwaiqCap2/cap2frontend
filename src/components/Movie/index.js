@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
 // import Desc from "../Desc";
-import { useNavigate } from "react-router-dom";
+// import { useNavigate } from "react-router-dom";
 import "./style.css";
 import Search from "../Search";
 import axios from "axios";
-import { AiFillLike } from "react-icons/ai";
+// import { AiFillLike } from "react-icons/ai";
 
 const Movie = () => {
   const BASE_URL = "http://localhost:4000";
@@ -34,19 +34,18 @@ const Movie = () => {
     }
   };
 
+  // const goFavourite = async (item) => {
+  //   console.log(item);
+  //   axios
+  //     .post(`${BASE_URL}/movie/addToFav2`, {
+  //       result: item,
+  //     })
+  //     .then(function (response) {})
+  //     .catch(function (error) {
+  //       console.log(error);
+  //     });
 
-  const goFavourite = async (item) => {
-    console.log(item);
-    axios
-      .post(`${BASE_URL}/movie/addToFav2`, {
-        result: item,
-      })
-      .then(function (response) {})
-      .catch(function (error) {
-        console.log(error);
-      });
-
-  };
+  // };
   return (
     <>
       <Search className="search" searchpages={searchpages} />
@@ -55,13 +54,13 @@ const Movie = () => {
           <div key={movie.trackId}>
             <div className="movie">
               <img id="image" src={movie.artworkUrl100} alt="movie"></img>
-              <button
+              {/* <button
                 onClick={() => {
                   goFavourite(movie);
                 }}
               >
                 Like
-              </button>
+              </button> */}
               <h3 id="trackName">{movie.trackName}</h3>
               <h3 id="primaryGenreName">{movie.primaryGenreName}</h3>
             </div>
